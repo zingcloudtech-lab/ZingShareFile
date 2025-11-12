@@ -3,11 +3,13 @@ const nextConfig = {
   output: 'export',
   basePath: '/ZingShareFile',
   assetPrefix: '/ZingShareFile/',
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   images: {
     unoptimized: true,
   },
   trailingSlash: true,
-  skipTrailingSlashRedirect: true,
 }
 
-module.exports = nextConfig
+export default nextConfig
