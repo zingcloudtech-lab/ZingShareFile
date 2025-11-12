@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APKMODY - Free APK Downloads for Android Games & Apps</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0f0f0f;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #999;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .search-box {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            font-size: 16px;
+        }
+
+        .search-box button {
+            padding: 12px 30px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .search-box button:hover {
+            background: #764ba2;
+        }
+
+        .section {
+            padding: 50px 20px;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #667eea;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #1a1a2e;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .card a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 8px;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+
+        .card-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card-desc {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            background: #667eea;
+            color: white;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: #764ba2;
+        }
+
+        .trending {
+            background: #1a1a2e;
+        }
+
+        .editors-choice {
+            background: #0f0f0f;
+        }
+
+        footer {
+            background: #0a0a0a;
+            padding: 40px 20px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #333;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #764ba2;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            nav {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">🎮 APKMODY</div>
+            <nav>
+                <a href="#games">Games</a>
+                <a href="#apps">Apps</a>
+                <a href="#trending">Trending</a>
+                <a href="#editors">Editors' Choice</a>
+                <a href="#blog">Blog</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <h1>Download Free APK & MOD Games</h1>
+            <p>The best free APK app store for Android. Download your favorite games and apps with awesome MODs</p>
+            <div class="search-box">
+                <input type="text" placeholder="Search games & apps...">
+                <button>Search</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Games Section -->
+    <section class="section" id="games">
+        <div class="container">
+            <h2 class="section-title">🎮 Popular Games</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon">🎯</div>
+                    <div class="card-title">Block Blast!</div>
+                    <div class="card-desc">v8.5.1 • No Ads</div>
+                    <a href="https://www.apkmody.com/games/block-blast-adventure-master" class="btn" target="_blank">Get</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🍬</div>
+                    <div class="card-title">Candy Crush Saga</div>
+                    <div class="card-desc">Unlimited Lives</div>
+                    <a href="https://www.apkmody.com/games/candy-crush-saga" class="btn" target="_blank">Get</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🚗</div>
+                    <div class="card-title">Car Driving 2025</div>
+                    <div class="card-desc">Unlimited Money</div>
+                    <a href="https://www.apkmody.com/games/car-driving-2024" class="btn" target="_blank">Get</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🏙️</div>
+                    <div class="card-title">Gangstar Vegas</div>
+                    <div class="card-desc">Full Version</div>
+                    <a href="https://www.apkmody.com/games/gangstar-vegas" class="btn" target="_blank">Get</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🚇</div>
+                    <div class="card-title">Subway Surfers</div>
+                    <div class="card-desc">Unlimited Coins</div>
+                    <a href="https://www.apkmody.com/games/subway-surfers" class="btn" target="_blank">Get</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">⛏️</div>
+                    <div class="card-title">Minecraft</div>
+                    <div class="card-desc">Full Unlocked</div>
+                    <a href="https://www.apkmody.com/games/minecraft" class="btn" target="_blank">Get</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Section -->
+    <section class="section trending" id="trending">
+        <div class="container">
+            <h2 class="section-title">🔥 Trending Now</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon">🎬</div>
+                    <div class="card-title">YouTube ReVanced</div>
+                    <div class="card-desc">Ad-Free & Premium</div>
+                    <a href="https://www.apkmody.com/apps/youtube-revanced" class="btn" target="_blank">Get</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🎵</div>
+                    <div class="card-title">Spotify Premium</div>
+                    <div class="card-desc">Unlimited Music</div>
+                    <a href="https://www.apkmody.com/apps/spotify" class="btn" target="_blank">Get</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔒</div>
+                    <div class="card-title">NordVPN</div>
+                    <div class="card-desc">Premium Unlocked</div>
+                    <a href="https://www.apkmody.com/apps/nordvpn" class="btn" target="_blank">Get</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📷</div>
+                    <div class="card-title">PicsArt</div>
+                    <div class="card-desc">Gold Unlocked</div>
+                    <a href="https://www.apkmody.com/apps/picsart" class="btn" target="_blank">Get</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📱</div>
+                    <div class="card-title">TikTok MOD</div>
+                    <div class="card-desc">Unlimited Features</div>
+                    <a href="https://www.apkmody.com/apps/tiktok-mod" class="btn" target="_blank">Get</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📺</div>
+                    <div class="card-title">Netflix MOD</div>
+                    <div class="card-desc">Premium Free</div>
+                    <a href="https://www.apkmody.com/apps/netflix" class="btn" target="_blank">Get</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Editors' Choice Section -->
+    <section class="section editors-choice" id="editors">
+        <div class="container">
+            <h2 class="section-title">⭐ Editors' Choice</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon">✈️</div>
+                    <div class="card-title">Travel Town</div>
+                    <div class="card-desc">Strategy Game</div>
+                    <a href="https://www.apkmody.com/games/travel-town" class="btn" target="_blank">Get</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🧩</div>
+                    <div class="card-title">Puzzle Games</div>
+                    <div class="card-desc">Collection</div>
+                    <a href="https://www.apkmody.com/games/puzzle" class="btn" target="_blank">Get</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🏃</div>
+                    <div class="card-title">Stumble Guys</div>
+                    <div class="card-desc">Multiplayer</div>
+                    <a href="https://www.apkmody.com/games/stumble-guys" class="btn" target="_blank">Get</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🐍</div>
+                    <div class="card-title">Snake.io</div>
+                    <div class="card-desc">Arcade Classic</div>
+                    <a href="https://www.apkmody.com/games/snake-io" class="btn" target="_blank">Get</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">⚔️</div>
+                    <div class="card-title">RPG Games</div>
+                    <div class="card-desc">Adventure</div>
+                    <a href="https://www.apkmody.com/games/rpg" class="btn" target="_blank">Get</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🏀</div>
+                    <div class="card-title">Sports Games</div>
+                    <div class="card-desc">Collection</div>
+                    <a href="https://www.apkmody.com/games/sports" class="btn" target="_blank">Get</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#blog">How to Install</a>
+            </div>
+            <p>&copy; 2024 APKMODY. All rights reserved. The best free APK app store for Android.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Add smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
