@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APKMODY - Free APK Downloads for Android Games & Apps</title>
+    <title>Xiaomi Phone Store - Premium Smartphones</title>
     <style>
         * {
             margin: 0;
@@ -13,18 +13,19 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #0f0f0f;
-            color: #fff;
-            line-height: 1.6;
+            background: #f5f5f5;
+            color: #333;
         }
 
+        /* Header */
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            color: white;
             padding: 20px 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         .container {
@@ -33,198 +34,349 @@
             padding: 0 20px;
         }
 
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
         .logo {
             font-size: 28px;
             font-weight: bold;
-            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         nav {
             display: flex;
             gap: 30px;
-            justify-content: center;
-            flex-wrap: wrap;
         }
 
         nav a {
-            color: #fff;
+            color: white;
             text-decoration: none;
             transition: opacity 0.3s;
+            font-weight: 500;
         }
 
         nav a:hover {
             opacity: 0.8;
         }
 
+        .search-box {
+            display: flex;
+            gap: 5px;
+        }
+
+        .search-box input {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            width: 200px;
+        }
+
+        .search-box button {
+            padding: 8px 20px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 1px solid white;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .search-box button:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        /* Hero */
         .hero {
-            text-align: center;
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            color: white;
             padding: 60px 20px;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            text-align: center;
         }
 
         .hero h1 {
             font-size: 48px;
             margin-bottom: 20px;
-            color: #667eea;
         }
 
         .hero p {
             font-size: 18px;
-            color: #999;
-            max-width: 600px;
-            margin: 0 auto 30px;
-        }
-
-        .search-box {
-            max-width: 500px;
-            margin: 0 auto;
-            display: flex;
-        }
-
-        .search-box input {
-            flex: 1;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 4px 0 0 4px;
-            font-size: 16px;
-        }
-
-        .search-box button {
-            padding: 12px 30px;
-            background: #667eea;
-            color: white;
-            border: none;
-            border-radius: 0 4px 4px 0;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-
-        .search-box button:hover {
-            background: #764ba2;
-        }
-
-        .section {
-            padding: 50px 20px;
-        }
-
-        .section-title {
-            font-size: 32px;
             margin-bottom: 30px;
-            color: #667eea;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: #1a1a2e;
-            border-radius: 8px;
-            padding: 15px;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
-        }
-
-        .card a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .card-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 8px;
-            margin: 0 auto 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 40px;
-        }
-
-        .card-title {
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .card-desc {
-            font-size: 12px;
-            color: #999;
-            margin-bottom: 10px;
+            opacity: 0.9;
         }
 
         .btn {
-            background: #667eea;
-            color: white;
-            padding: 8px 20px;
+            background: white;
+            color: #ff6b35;
+            padding: 12px 30px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
             font-weight: bold;
-            transition: background 0.3s;
-            text-decoration: none;
-            display: inline-block;
+            transition: transform 0.3s;
+            font-size: 16px;
         }
 
         .btn:hover {
-            background: #764ba2;
+            transform: translateY(-2px);
         }
 
-        .trending {
-            background: #1a1a2e;
+        /* Products */
+        .products {
+            padding: 60px 20px;
         }
 
-        .editors-choice {
-            background: #0f0f0f;
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #ff6b35;
         }
 
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .product-specs {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .product-price {
+            font-size: 24px;
+            color: #ff6b35;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .price-original {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+
+        .discount {
+            background: #ff6b35;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .product-card .btn {
+            width: 100%;
+            background: #ff6b35;
+            color: white;
+        }
+
+        /* Features */
+        .features {
+            background: white;
+            padding: 60px 20px;
+            margin: 60px 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .feature-item h3 {
+            color: #ff6b35;
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Specs Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            overflow: auto;
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #ff6b35;
+        }
+
+        .modal-title {
+            color: #ff6b35;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .specs-list {
+            list-style: none;
+        }
+
+        .specs-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .specs-list li:last-child {
+            border-bottom: none;
+        }
+
+        .specs-list strong {
+            color: #ff6b35;
+        }
+
+        /* Footer */
         footer {
-            background: #0a0a0a;
+            background: #333;
+            color: white;
             padding: 40px 20px;
             text-align: center;
-            color: #666;
-            border-top: 1px solid #333;
         }
 
-        .footer-links {
-            display: flex;
-            justify-content: center;
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 30px;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
-        .footer-links a {
-            color: #667eea;
+        .footer-section h4 {
+            color: #ff6b35;
+            margin-bottom: 15px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: #ccc;
             text-decoration: none;
             transition: color 0.3s;
         }
 
-        .footer-links a:hover {
-            color: #764ba2;
+        .footer-section a:hover {
+            color: #ff6b35;
         }
 
+        .footer-section li {
+            margin-bottom: 8px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #555;
+            padding-top: 20px;
+            color: #999;
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 32px;
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
             }
 
             nav {
                 gap: 15px;
-                font-size: 14px;
+                flex-wrap: wrap;
+                justify-content: center;
             }
 
-            .grid {
-                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            .search-box input {
+                width: 150px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             }
         }
     </style>
@@ -233,189 +385,310 @@
     <!-- Header -->
     <header>
         <div class="container">
-            <div class="logo">🎮 APKMODY</div>
-            <nav>
-                <a href="#games">Games</a>
-                <a href="#apps">Apps</a>
-                <a href="#trending">Trending</a>
-                <a href="#editors">Editors' Choice</a>
-                <a href="#blog">Blog</a>
-            </nav>
+            <div class="header-content">
+                <div class="logo">
+                    <span>📱</span>
+                    <span>Xiaomi Store</span>
+                </div>
+                <nav>
+                    <a href="#phones">Phones</a>
+                    <a href="#features">Features</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search phones...">
+                    <button onclick="searchProducts()">Search</button>
+                </div>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <div class="hero">
         <div class="container">
-            <h1>Download Free APK & MOD Games</h1>
-            <p>The best free APK app store for Android. Download your favorite games and apps with awesome MODs</p>
-            <div class="search-box">
-                <input type="text" placeholder="Search games & apps...">
-                <button>Search</button>
-            </div>
+            <h1>🚀 Latest Xiaomi Smartphones</h1>
+            <p>Experience innovation with cutting-edge technology and affordable prices</p>
+            <button class="btn" onclick="scrollTo('#phones')">Explore Now</button>
         </div>
     </div>
 
-    <!-- Games Section -->
-    <section class="section" id="games">
+    <!-- Products -->
+    <section class="products" id="phones">
         <div class="container">
-            <h2 class="section-title">🎮 Popular Games</h2>
-            <div class="grid">
-                <div class="card">
-                    <div class="card-icon">🎯</div>
-                    <div class="card-title">Block Blast!</div>
-                    <div class="card-desc">v8.5.1 • No Ads</div>
-                    <a href="https://www.apkmody.com/games/block-blast-adventure-master" class="btn" target="_blank">Get</a>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🍬</div>
-                    <div class="card-title">Candy Crush Saga</div>
-                    <div class="card-desc">Unlimited Lives</div>
-                    <a href="https://www.apkmody.com/games/candy-crush-saga" class="btn" target="_blank">Get</a>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🚗</div>
-                    <div class="card-title">Car Driving 2025</div>
-                    <div class="card-desc">Unlimited Money</div>
-                    <a href="https://www.apkmody.com/games/car-driving-2024" class="btn" target="_blank">Get</a>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🏙️</div>
-                    <div class="card-title">Gangstar Vegas</div>
-                    <div class="card-desc">Full Version</div>
-                    <a href="https://www.apkmody.com/games/gangstar-vegas" class="btn" target="_blank">Get</a>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🚇</div>
-                    <div class="card-title">Subway Surfers</div>
-                    <div class="card-desc">Unlimited Coins</div>
-                    <a href="https://www.apkmody.com/games/subway-surfers" class="btn" target="_blank">Get</a>
-                </div>
-                <div class="card">
-                    <div class="card-icon">⛏️</div>
-                    <div class="card-title">Minecraft</div>
-                    <div class="card-desc">Full Unlocked</div>
-                    <a href="https://www.apkmody.com/games/minecraft" class="btn" target="_blank">Get</a>
-                </div>
-            </div>
+            <h2 class="section-title">Our Latest Models</h2>
+            <div class="products-grid" id="productsGrid"></div>
         </div>
     </section>
 
-    <!-- Trending Section -->
-    <section class="section trending" id="trending">
+    <!-- Features -->
+    <section class="features" id="features">
         <div class="container">
-            <h2 class="section-title">🔥 Trending Now</h2>
-            <div class="grid">
-                <div class="card">
-                    <div class="card-icon">🎬</div>
-                    <div class="card-title">YouTube ReVanced</div>
-                    <div class="card-desc">Ad-Free & Premium</div>
-                    <a href="https://www.apkmody.com/apps/youtube-revanced" class="btn" target="_blank">Get</a>
+            <h2 class="section-title">Why Choose Xiaomi?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">💎</div>
+                    <h3>Premium Quality</h3>
+                    <p>High-end materials and craftsmanship in every device</p>
                 </div>
-                <div class="card">
-                    <div class="card-icon">🎵</div>
-                    <div class="card-title">Spotify Premium</div>
-                    <div class="card-desc">Unlimited Music</div>
-                    <a href="https://www.apkmody.com/apps/spotify" class="btn" target="_blank">Get</a>
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Fast Performance</h3>
+                    <p>Latest processors for smooth and powerful experience</p>
                 </div>
-                <div class="card">
-                    <div class="card-icon">🔒</div>
-                    <div class="card-title">NordVPN</div>
-                    <div class="card-desc">Premium Unlocked</div>
-                    <a href="https://www.apkmody.com/apps/nordvpn" class="btn" target="_blank">Get</a>
+                <div class="feature-item">
+                    <div class="feature-icon">📷</div>
+                    <h3>Amazing Camera</h3>
+                    <p>Professional-grade photography with AI enhancement</p>
                 </div>
-                <div class="card">
-                    <div class="card-icon">📷</div>
-                    <div class="card-title">PicsArt</div>
-                    <div class="card-desc">Gold Unlocked</div>
-                    <a href="https://www.apkmody.com/apps/picsart" class="btn" target="_blank">Get</a>
+                <div class="feature-item">
+                    <div class="feature-icon">🔋</div>
+                    <h3>Long Battery Life</h3>
+                    <p>All-day battery with fast charging technology</p>
                 </div>
-                <div class="card">
-                    <div class="card-icon">📱</div>
-                    <div class="card-title">TikTok MOD</div>
-                    <div class="card-desc">Unlimited Features</div>
-                    <a href="https://www.apkmody.com/apps/tiktok-mod" class="btn" target="_blank">Get</a>
+                <div class="feature-item">
+                    <div class="feature-icon">💰</div>
+                    <h3>Best Price</h3>
+                    <p>Premium features at affordable prices</p>
                 </div>
-                <div class="card">
-                    <div class="card-icon">📺</div>
-                    <div class="card-title">Netflix MOD</div>
-                    <div class="card-desc">Premium Free</div>
-                    <a href="https://www.apkmody.com/apps/netflix" class="btn" target="_blank">Get</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Editors' Choice Section -->
-    <section class="section editors-choice" id="editors">
-        <div class="container">
-            <h2 class="section-title">⭐ Editors' Choice</h2>
-            <div class="grid">
-                <div class="card">
-                    <div class="card-icon">✈️</div>
-                    <div class="card-title">Travel Town</div>
-                    <div class="card-desc">Strategy Game</div>
-                    <a href="https://www.apkmody.com/games/travel-town" class="btn" target="_blank">Get</a>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🧩</div>
-                    <div class="card-title">Puzzle Games</div>
-                    <div class="card-desc">Collection</div>
-                    <a href="https://www.apkmody.com/games/puzzle" class="btn" target="_blank">Get</a>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🏃</div>
-                    <div class="card-title">Stumble Guys</div>
-                    <div class="card-desc">Multiplayer</div>
-                    <a href="https://www.apkmody.com/games/stumble-guys" class="btn" target="_blank">Get</a>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🐍</div>
-                    <div class="card-title">Snake.io</div>
-                    <div class="card-desc">Arcade Classic</div>
-                    <a href="https://www.apkmody.com/games/snake-io" class="btn" target="_blank">Get</a>
-                </div>
-                <div class="card">
-                    <div class="card-icon">⚔️</div>
-                    <div class="card-title">RPG Games</div>
-                    <div class="card-desc">Adventure</div>
-                    <a href="https://www.apkmody.com/games/rpg" class="btn" target="_blank">Get</a>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🏀</div>
-                    <div class="card-title">Sports Games</div>
-                    <div class="card-desc">Collection</div>
-                    <a href="https://www.apkmody.com/games/sports" class="btn" target="_blank">Get</a>
+                <div class="feature-item">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Warranty</h3>
+                    <p>2-year warranty and excellent customer support</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer id="contact">
         <div class="container">
-            <div class="footer-links">
-                <a href="#about">About Us</a>
-                <a href="#contact">Contact</a>
-                <a href="#terms">Terms of Service</a>
-                <a href="#privacy">Privacy Policy</a>
-                <a href="#blog">How to Install</a>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#">Smartphones</a></li>
+                        <li><a href="#">Tablets</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Warranty</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
             </div>
-            <p>&copy; 2024 APKMODY. All rights reserved. The best free APK app store for Android.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Xiaomi Store. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
+    <!-- Modal -->
+    <div id="specsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 class="modal-title" id="modalTitle"></h2>
+            <ul class="specs-list" id="specsList"></ul>
+            <br>
+            <button class="btn" style="width: 100%; margin-top: 20px;">Buy Now - <span id="modalPrice"></span></button>
+        </div>
+    </div>
+
     <script>
-        // Add smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
+        // Products Database
+        const products = [
+            {
+                id: 1,
+                name: 'Xiaomi 14',
+                emoji: '🎯',
+                price: '$799',
+                originalPrice: '$999',
+                discount: '20%',
+                specs: [
+                    ['Display', '6.7" AMOLED 120Hz'],
+                    ['Processor', 'Snapdragon 8 Gen 3'],
+                    ['RAM', '12GB'],
+                    ['Storage', '256GB'],
+                    ['Camera', '50MP Main + 32MP Tele'],
+                    ['Battery', '5000mAh 90W Charging'],
+                    ['OS', 'HyperOS']
+                ]
+            },
+            {
+                id: 2,
+                name: 'Xiaomi 14 Ultra',
+                emoji: '👑',
+                price: '$1099',
+                originalPrice: '$1299',
+                discount: '15%',
+                specs: [
+                    ['Display', '6.73" AMOLED 120Hz'],
+                    ['Processor', 'Snapdragon 8 Gen 3'],
+                    ['RAM', '16GB'],
+                    ['Storage', '512GB'],
+                    ['Camera', '50MP + 50MP + 50MP Triple'],
+                    ['Battery', '5300mAh 120W Charging'],
+                    ['Design', 'Leica Optics']
+                ]
+            },
+            {
+                id: 3,
+                name: 'Xiaomi 14 Pro',
+                emoji: '⭐',
+                price: '$899',
+                originalPrice: '$1099',
+                discount: '18%',
+                specs: [
+                    ['Display', '6.7" AMOLED 120Hz'],
+                    ['Processor', 'Snapdragon 8 Gen 3'],
+                    ['RAM', '12GB'],
+                    ['Storage', '512GB'],
+                    ['Camera', '50MP + 32MP + 50MP'],
+                    ['Battery', '5000mAh 100W Charging'],
+                    ['Features', 'IP68 Rating']
+                ]
+            },
+            {
+                id: 4,
+                name: 'Xiaomi 13T',
+                emoji: '🚀',
+                price: '$599',
+                originalPrice: '$799',
+                discount: '25%',
+                specs: [
+                    ['Display', '6.67" AMOLED 144Hz'],
+                    ['Processor', 'MediaTek Dimensity 9200'],
+                    ['RAM', '8GB'],
+                    ['Storage', '256GB'],
+                    ['Camera', '50MP Main + 50MP Ultra'],
+                    ['Battery', '5000mAh 67W Charging'],
+                    ['Weight', '195g']
+                ]
+            },
+            {
+                id: 5,
+                name: 'Xiaomi 13',
+                emoji: '💎',
+                price: '$499',
+                originalPrice: '$699',
+                discount: '30%',
+                specs: [
+                    ['Display', '6.36" AMOLED 120Hz'],
+                    ['Processor', 'Snapdragon 8 Gen 2'],
+                    ['RAM', '8GB'],
+                    ['Storage', '128GB'],
+                    ['Camera', '50MP + 50MP Dual'],
+                    ['Battery', '4500mAh 67W Charging'],
+                    ['Design', 'Leica Certified']
+                ]
+            },
+            {
+                id: 6,
+                name: 'Xiaomi Pad 6',
+                emoji: '📱',
+                price: '$399',
+                originalPrice: '$549',
+                discount: '27%',
+                specs: [
+                    ['Display', '11" LCD 144Hz'],
+                    ['Processor', 'Snapdragon 8+ Gen 1'],
+                    ['RAM', '6GB'],
+                    ['Storage', '256GB'],
+                    ['Camera', '13MP + 8MP'],
+                    ['Battery', '10100mAh 33W'],
+                    ['Speaker', 'Quad Speaker']
+                ]
+            }
+        ];
+
+        // Render Products
+        function renderProducts(filter = null) {
+            const grid = document.getElementById('productsGrid');
+            const filtered = filter ? products.filter(p => p.name.toLowerCase().includes(filter.toLowerCase())) : products;
+            
+            grid.innerHTML = filtered.map(product => `
+                <div class="product-card">
+                    <div class="product-image">${product.emoji}</div>
+                    <div class="product-info">
+                        <div class="product-name">${product.name}</div>
+                        <div class="product-specs">
+                            🖥️ Premium Display<br>
+                            ⚡ Latest Processor<br>
+                            📷 Pro Camera
+                        </div>
+                        <div class="product-price">
+                            ${product.price}
+                            <span class="price-original">${product.originalPrice}</span>
+                            <span class="discount">${product.discount}</span>
+                        </div>
+                        <button class="btn" onclick="showSpecs('${product.name}', ${JSON.stringify(product.specs).replace(/"/g, '&quot;')}, '${product.price}')">View Specs</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Show Specs Modal
+        function showSpecs(name, specs, price) {
+            document.getElementById('modalTitle').textContent = name;
+            document.getElementById('modalPrice').textContent = price;
+            
+            const specsList = document.getElementById('specsList');
+            specsList.innerHTML = specs.map(spec => `
+                <li>
+                    <strong>${spec[0]}</strong>
+                    <span>${spec[1]}</span>
+                </li>
+            `).join('');
+            
+            document.getElementById('specsModal').style.display = 'block';
+        }
+
+        // Close Modal
+        function closeModal() {
+            document.getElementById('specsModal').style.display = 'none';
+        }
+
+        // Search Function
+        function searchProducts() {
+            const query = document.getElementById('searchInput').value;
+            renderProducts(query);
+        }
+
+        // Smooth Scroll
+        function scrollTo(selector) {
+            document.querySelector(selector).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Close modal on outside click
+        window.onclick = function(event) {
+            const modal = document.getElementById('specsModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // Initialize
+        renderProducts();
     </script>
 </body>
 </html>
